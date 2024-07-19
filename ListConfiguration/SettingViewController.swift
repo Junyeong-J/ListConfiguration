@@ -50,50 +50,21 @@ final class SettingViewController: UIViewController {
     ]
     
     var dataSource: UICollectionViewDiffableDataSource<Section, Setting>!
+    private lazy var collectionView = makeCollectionView()
     
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
-    
-    func createLayout() -> UICollectionViewLayout {
+    func makeCollectionView() -> UICollectionView {
+        
         var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        configuration.headerMode = .supplementary
         configuration.backgroundColor = .systemRed
         configuration.showsSeparators = false
-        let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
-            let sectionType = Section.allCases[sectionIndex]
-            return self.createBasicLayout()
-        }
-        return layout
-    }
-    
-    func createBasicLayout() -> NSCollectionLayoutSection {
-        /// 각 item의 사이즈 설정
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .estimated(44))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        /// 아이템의 마진 값 설정
-//        item.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4)
         
-        /// 아이템들이 들어갈 Group 설정
-        /// groupSize 설정
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(44))
-        /// subitem에 item을 넣어주고 각 그룹 당 아이템이 보여질 갯수는 3개
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = .systemBackground
+        view.translatesAutoresizingMaskIntoConstraints = false
         
-        /// 최종적으로 section 설정
-        let section = NSCollectionLayoutSection(group: group)
-        
-        /// 헤더 생성
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                heightDimension: .estimated(44))
-        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
-                                                                 elementKind: UICollectionView.elementKindSectionHeader,
-                                                                 alignment: .top)
-        /// 이 Layout은 헤더를 보여지도록 적용
-        section.boundarySupplementaryItems = [ header ]
-        /// 어떤 형식의 스크롤을 쓸지 결정
-//        section.orthogonalScrollingBehavior = .continuous
-        
-        return section
+        return view
     }
     
     override func viewDidLoad() {
@@ -103,7 +74,7 @@ final class SettingViewController: UIViewController {
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
-        
+        collectionView.backgroundColor = .black
         configureDataSource()
         updateSnapshot()
     }
@@ -113,7 +84,6 @@ final class SettingViewController: UIViewController {
         registration = UICollectionView.CellRegistration { cell, indexPath, itemIdentifier in
             var content = UIListContentConfiguration.valueCell()
             content.text = itemIdentifier.subTitle
-            content.secondaryTextProperties.color = .blue
             content.image = UIImage(systemName: "star.fill")
             content.imageProperties.tintColor = .orange
             cell.contentConfiguration = content
