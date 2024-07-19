@@ -13,6 +13,10 @@
 		724FC85C2C4A8A9C00CDA561 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 724FC85B2C4A8A9C00CDA561 /* Base */; };
 		724FC8642C4A8B1D00CDA561 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC8632C4A8B1D00CDA561 /* SettingViewController.swift */; };
 		724FC8672C4A8E0C00CDA561 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 724FC8662C4A8E0C00CDA561 /* SnapKit */; };
+		724FC86B2C4AD8AA00CDA561 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC86A2C4AD8AA00CDA561 /* SettingViewModel.swift */; };
+		724FC86E2C4AD8D100CDA561 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC86D2C4AD8D100CDA561 /* Observable.swift */; };
+		724FC8712C4AD9D800CDA561 /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC8702C4AD9D800CDA561 /* SettingSection.swift */; };
+		724FC8732C4AD9FB00CDA561 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC8722C4AD9FB00CDA561 /* SettingData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		724FC85B2C4A8A9C00CDA561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		724FC85D2C4A8A9C00CDA561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		724FC8632C4A8B1D00CDA561 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		724FC86A2C4AD8AA00CDA561 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		724FC86D2C4AD8D100CDA561 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		724FC8702C4AD9D800CDA561 /* SettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSection.swift; sourceTree = "<group>"; };
+		724FC8722C4AD9FB00CDA561 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +64,11 @@
 		724FC84E2C4A8A9A00CDA561 /* ListConfiguration */ = {
 			isa = PBXGroup;
 			children = (
-				724FC8632C4A8B1D00CDA561 /* SettingViewController.swift */,
+				724FC8742C4ADC4000CDA561 /* Data */,
+				724FC86F2C4AD9C800CDA561 /* Model */,
+				724FC86C2C4AD8C200CDA561 /* Observable */,
+				724FC8692C4AD88F00CDA561 /* ViewModel */,
+				724FC8682C4AD83E00CDA561 /* ViewController */,
 				724FC84F2C4A8A9A00CDA561 /* AppDelegate.swift */,
 				724FC8512C4A8A9A00CDA561 /* SceneDelegate.swift */,
 				724FC8582C4A8A9C00CDA561 /* Assets.xcassets */,
@@ -64,6 +76,46 @@
 				724FC85D2C4A8A9C00CDA561 /* Info.plist */,
 			);
 			path = ListConfiguration;
+			sourceTree = "<group>";
+		};
+		724FC8682C4AD83E00CDA561 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				724FC8632C4A8B1D00CDA561 /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		724FC8692C4AD88F00CDA561 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				724FC86A2C4AD8AA00CDA561 /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		724FC86C2C4AD8C200CDA561 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				724FC86D2C4AD8D100CDA561 /* Observable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		724FC86F2C4AD9C800CDA561 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				724FC8702C4AD9D800CDA561 /* SettingSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		724FC8742C4ADC4000CDA561 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				724FC8722C4AD9FB00CDA561 /* SettingData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				724FC8502C4A8A9A00CDA561 /* AppDelegate.swift in Sources */,
+				724FC86E2C4AD8D100CDA561 /* Observable.swift in Sources */,
+				724FC8712C4AD9D800CDA561 /* SettingSection.swift in Sources */,
+				724FC8732C4AD9FB00CDA561 /* SettingData.swift in Sources */,
 				724FC8522C4A8A9A00CDA561 /* SceneDelegate.swift in Sources */,
 				724FC8642C4A8B1D00CDA561 /* SettingViewController.swift in Sources */,
+				724FC86B2C4AD8AA00CDA561 /* SettingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
