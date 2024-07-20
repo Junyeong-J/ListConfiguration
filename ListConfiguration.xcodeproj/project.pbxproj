@@ -168,9 +168,9 @@
 		724FC87F2C4BDA0B00CDA561 /* TalkTravel */ = {
 			isa = PBXGroup;
 			children = (
+				724FC8862C4BDBD800CDA561 /* Data */,
 				724FC88C2C4BDF7F00CDA561 /* Model */,
 				724FC8892C4BDC3200CDA561 /* ViewModel */,
-				724FC8862C4BDBD800CDA561 /* Data */,
 				724FC8822C4BDA3D00CDA561 /* View */,
 				724FC8832C4BDA4300CDA561 /* ViewController */,
 			);

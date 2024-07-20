@@ -40,10 +40,17 @@ final class TalkView: BaseView {
             var content = UIListContentConfiguration.valueCell()
             content.text = itemIdentifier.chatroomName
             if let lastMessage = itemIdentifier.chatList.last {
-                content.secondaryText = lastMessage.message
-                content.image = UIImage(named: lastMessage.user.profileImage)
+                content.secondaryText = lastMessage.changeDate()
+                content.textProperties.font = .boldSystemFont(ofSize: 17)
+                
+                let imageName = lastMessage.user.profileImage
+                let image = UIImage(named: imageName) ?? UIImage(systemName: "star")
+                content.image = image
+                
+                content.imageProperties.maximumSize = CGSize(width: 50, height: 50)
+                content.imageProperties.cornerRadius = 25
+                content.imageProperties.tintColor = .gray
             }
-            content.imageProperties.tintColor = .gray
             cell.contentConfiguration = content
             let backgroundConfig = UIBackgroundConfiguration.listGroupedCell()
             cell.backgroundConfiguration = backgroundConfig

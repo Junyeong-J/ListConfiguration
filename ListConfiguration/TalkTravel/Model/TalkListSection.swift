@@ -22,6 +22,17 @@ struct Chat: Hashable {
     let user: User
     let date: String
     let message: String
+    
+    func changeDate() -> String {
+        let inputDateFormatter = DateFormatter()
+        inputDateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        guard let dateObject = inputDateFormatter.date(from: date) else {
+            return date
+        }
+        let outputDateFormatter = DateFormatter()
+        outputDateFormatter.dateFormat = "yy.MM.dd"
+        return outputDateFormatter.string(from: dateObject)
+    }
 }
 
 enum User: String, Hashable {
