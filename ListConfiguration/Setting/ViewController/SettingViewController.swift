@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class SettingViewController: BaseViewController<SettingView> {
     
@@ -14,7 +13,6 @@ final class SettingViewController: BaseViewController<SettingView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rootView.configureDataSource()
         bindData()
     }
     

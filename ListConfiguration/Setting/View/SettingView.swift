@@ -39,7 +39,7 @@ final class SettingView: BaseView{
     }
     
     override func configureView() {
-        
+        configureDataSource()
     }
     
     func configureDataSource() {
