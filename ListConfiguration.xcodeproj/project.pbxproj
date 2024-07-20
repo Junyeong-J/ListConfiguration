@@ -20,6 +20,12 @@
 		724FC8772C4AE40000CDA561 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC8762C4AE40000CDA561 /* BaseViewController.swift */; };
 		724FC87A2C4AE50900CDA561 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC8792C4AE50900CDA561 /* SettingView.swift */; };
 		724FC87C2C4AE51F00CDA561 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC87B2C4AE51F00CDA561 /* BaseView.swift */; };
+		724FC8812C4BDA2800CDA561 /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC8802C4BDA2800CDA561 /* TalkViewController.swift */; };
+		724FC8852C4BDA5300CDA561 /* TalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC8842C4BDA5300CDA561 /* TalkView.swift */; };
+		724FC8882C4BDBE100CDA561 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC8872C4BDBE100CDA561 /* ChattingData.swift */; };
+		724FC88B2C4BDC4400CDA561 /* TalkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC88A2C4BDC4400CDA561 /* TalkViewModel.swift */; };
+		724FC88E2C4BDF8D00CDA561 /* TalkListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC88D2C4BDF8D00CDA561 /* TalkListSection.swift */; };
+		724FC8912C4BE0AC00CDA561 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FC8902C4BE0AC00CDA561 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,12 @@
 		724FC8762C4AE40000CDA561 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		724FC8792C4AE50900CDA561 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		724FC87B2C4AE51F00CDA561 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		724FC8802C4BDA2800CDA561 /* TalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
+		724FC8842C4BDA5300CDA561 /* TalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkView.swift; sourceTree = "<group>"; };
+		724FC8872C4BDBE100CDA561 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
+		724FC88A2C4BDC4400CDA561 /* TalkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkViewModel.swift; sourceTree = "<group>"; };
+		724FC88D2C4BDF8D00CDA561 /* TalkListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListSection.swift; sourceTree = "<group>"; };
+		724FC8902C4BE0AC00CDA561 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +82,11 @@
 		724FC84E2C4A8A9A00CDA561 /* ListConfiguration */ = {
 			isa = PBXGroup;
 			children = (
-				724FC8782C4AE50300CDA561 /* View */,
+				724FC88F2C4BE0A000CDA561 /* TabBarController */,
+				724FC87F2C4BDA0B00CDA561 /* TalkTravel */,
+				724FC87E2C4BD9C000CDA561 /* Setting */,
 				724FC8752C4AE3EF00CDA561 /* Base */,
-				724FC8742C4ADC4000CDA561 /* Data */,
-				724FC86F2C4AD9C800CDA561 /* Model */,
 				724FC86C2C4AD8C200CDA561 /* Observable */,
-				724FC8692C4AD88F00CDA561 /* ViewModel */,
-				724FC8682C4AD83E00CDA561 /* ViewController */,
 				724FC84F2C4A8A9A00CDA561 /* AppDelegate.swift */,
 				724FC8512C4A8A9A00CDA561 /* SceneDelegate.swift */,
 				724FC8582C4A8A9C00CDA561 /* Assets.xcassets */,
@@ -141,6 +151,78 @@
 				724FC8792C4AE50900CDA561 /* SettingView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		724FC87E2C4BD9C000CDA561 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				724FC8742C4ADC4000CDA561 /* Data */,
+				724FC86F2C4AD9C800CDA561 /* Model */,
+				724FC8782C4AE50300CDA561 /* View */,
+				724FC8682C4AD83E00CDA561 /* ViewController */,
+				724FC8692C4AD88F00CDA561 /* ViewModel */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		724FC87F2C4BDA0B00CDA561 /* TalkTravel */ = {
+			isa = PBXGroup;
+			children = (
+				724FC88C2C4BDF7F00CDA561 /* Model */,
+				724FC8892C4BDC3200CDA561 /* ViewModel */,
+				724FC8862C4BDBD800CDA561 /* Data */,
+				724FC8822C4BDA3D00CDA561 /* View */,
+				724FC8832C4BDA4300CDA561 /* ViewController */,
+			);
+			path = TalkTravel;
+			sourceTree = "<group>";
+		};
+		724FC8822C4BDA3D00CDA561 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				724FC8842C4BDA5300CDA561 /* TalkView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		724FC8832C4BDA4300CDA561 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				724FC8802C4BDA2800CDA561 /* TalkViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		724FC8862C4BDBD800CDA561 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				724FC8872C4BDBE100CDA561 /* ChattingData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		724FC8892C4BDC3200CDA561 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				724FC88A2C4BDC4400CDA561 /* TalkViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		724FC88C2C4BDF7F00CDA561 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				724FC88D2C4BDF8D00CDA561 /* TalkListSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		724FC88F2C4BE0A000CDA561 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				724FC8902C4BE0AC00CDA561 /* TabBarController.swift */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,13 +302,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				724FC8502C4A8A9A00CDA561 /* AppDelegate.swift in Sources */,
+				724FC8912C4BE0AC00CDA561 /* TabBarController.swift in Sources */,
 				724FC86E2C4AD8D100CDA561 /* Observable.swift in Sources */,
+				724FC8882C4BDBE100CDA561 /* ChattingData.swift in Sources */,
+				724FC88E2C4BDF8D00CDA561 /* TalkListSection.swift in Sources */,
 				724FC8712C4AD9D800CDA561 /* SettingSection.swift in Sources */,
 				724FC87A2C4AE50900CDA561 /* SettingView.swift in Sources */,
 				724FC8732C4AD9FB00CDA561 /* SettingData.swift in Sources */,
+				724FC88B2C4BDC4400CDA561 /* TalkViewModel.swift in Sources */,
 				724FC8522C4A8A9A00CDA561 /* SceneDelegate.swift in Sources */,
 				724FC8772C4AE40000CDA561 /* BaseViewController.swift in Sources */,
 				724FC87C2C4AE51F00CDA561 /* BaseView.swift in Sources */,
+				724FC8852C4BDA5300CDA561 /* TalkView.swift in Sources */,
+				724FC8812C4BDA2800CDA561 /* TalkViewController.swift in Sources */,
 				724FC8642C4A8B1D00CDA561 /* SettingViewController.swift in Sources */,
 				724FC86B2C4AD8AA00CDA561 /* SettingViewModel.swift in Sources */,
 			);
